@@ -1,0 +1,251 @@
+/**
+ * General.
+ */
+.wrap.sarvarov-wrap {
+	max-width: 1400px;
+}
+
+.wrap.sarvarov-wrap .plugin-settings {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+    margin-top: 20px;
+}
+
+.wrap.sarvarov-wrap > h2 {
+    font-size: 30px;
+	margin-top: 20px;
+	padding: 0;
+	text-align: center;
+}
+
+.wrap.sarvarov-wrap > h2 > code {
+	vertical-align: top;
+	color: #000;
+}
+
+.wrap.sarvarov-wrap > h2 svg {
+	fill: #007bff;
+	padding-right: 5px;
+}
+
+.wrap.sarvarov-wrap .plugin-settings > form {
+	flex: 1000px 0 1;
+}
+
+.wrap.sarvarov-wrap .plugin-settings > form, 
+.wrap.sarvarov-wrap .plugin-sidebar .sidebar-inner > div {
+	background: #fff;
+    padding: 40px;
+	box-shadow: 0 1px 1px 0 rgba(0,0,0,.1);
+}
+
+.wrap.sarvarov-wrap .plugin-settings > form > .section:not(:first-of-type) {
+	padding-top: 40px;
+    margin-top: 40px;
+    border-top: 1px solid rgba(0,0,0,.1);
+}
+
+.wrap.sarvarov-wrap .plugin-settings > form > div > h2:first-of-type {
+    margin-top: 0;
+}
+
+.wrap.sarvarov-wrap .plugin-settings > form .transition-settings label {
+	margin: 0 0 16px 0 !important;
+}
+
+.wrap.sarvarov-wrap .plugin-settings > form .transition-settings label > span {
+	min-width: 10em;
+    vertical-align: baseline;
+    display: inline-block;
+}
+
+.wrap.sarvarov-wrap .plugin-settings > form .transition-settings label > input, 
+.wrap.sarvarov-wrap .plugin-settings > form .transition-settings label > select {
+	margin-left: 25px;
+}
+
+.wrap.sarvarov-wrap .notice {
+	margin-top: 20px;
+}
+
+.wrap.sarvarov-wrap p.submit {
+	margin-top: 5px;
+	margin-bottom: 0;
+	padding-bottom: 0;
+}
+
+/**
+ * Sidebar.
+ */
+.wrap.sarvarov-wrap .plugin-sidebar {
+	display: none;
+	width: 400px;
+	position: relative;
+    padding-left: 20px;
+    flex: 400px 0 0;
+    box-sizing: border-box;
+}
+
+.wrap.sarvarov-wrap .plugin-sidebar .sidebar-inner > div.twitter-widget {
+	padding: 20px 30px;
+}
+
+.wrap.sarvarov-wrap .plugin-sidebar .sidebar-inner > div {
+	margin-bottom: 30px;
+	text-align: center;
+}
+
+.wrap.sarvarov-wrap .plugin-sidebar .sidebar-inner > div .button {
+	margin-top: 25px;
+    white-space: normal;
+    height: auto;
+}
+
+.wrap.sarvarov-wrap .plugin-sidebar .sidebar-inner > div:last-of-type {
+	margin-bottom: 0;
+}
+
+.wrap.sarvarov-wrap .plugin-sidebar .sidebar-inner > div .widget-header {
+	margin-bottom: 20px; 
+	font-size: 1.5em; 
+	font-weight: 300;
+}
+
+.wrap.sarvarov-wrap .plugin-sidebar .sidebar-inner > div.more-plugins a {
+	display: block;
+	padding: 20px;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.wrap.sarvarov-wrap .plugin-sidebar .sidebar-inner > div.more-plugins a:hover {
+	background: rgba(0, 123, 255, 0.1);
+}
+
+.wrap.sarvarov-wrap .plugin-sidebar .sidebar-inner > div.more-plugins a > span {
+	display: block;
+    color: #808080;
+    font-weight: 300;
+    text-decoration: none;
+    font-size: .75em;
+    margin-top: 5px;
+}
+
+@media (min-width: 1400px) {
+	.wrap.sarvarov-wrap .plugin-sidebar {
+		display: block;
+	}
+	
+	.wrap.sarvarov-wrap .plugin-settings {
+		display: flex;
+		flex-direction: row;
+	}
+}
+
+/**
+ * Change colors.
+ */
+.wrap.sarvarov-wrap input[type=checkbox]:focus, 
+.wrap.sarvarov-wrap input[type=color]:focus, 
+.wrap.sarvarov-wrap input[type=date]:focus, 
+.wrap.sarvarov-wrap input[type=datetime-local]:focus, 
+.wrap.sarvarov-wrap input[type=datetime]:focus, 
+.wrap.sarvarov-wrap input[type=email]:focus, 
+.wrap.sarvarov-wrap input[type=month]:focus, 
+.wrap.sarvarov-wrap input[type=number]:focus, 
+.wrap.sarvarov-wrap input[type=password]:focus, 
+.wrap.sarvarov-wrap input[type=radio]:focus, 
+.wrap.sarvarov-wrap input[type=search]:focus, 
+.wrap.sarvarov-wrap input[type=tel]:focus, 
+.wrap.sarvarov-wrap input[type=text]:focus, 
+.wrap.sarvarov-wrap input[type=time]:focus, 
+.wrap.sarvarov-wrap input[type=url]:focus, 
+.wrap.sarvarov-wrap input[type=week]:focus, 
+.wrap.sarvarov-wrap select:focus, 
+.wrap.sarvarov-wrap textarea:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 2px #007bff;
+}
+
+.wrap.sarvarov-wrap input[type=checkbox]:checked:before {
+    color: #007bff;
+}
+
+.wrap.sarvarov-wrap input[type=radio]:checked:before {
+    background-color: #007bff;
+}
+
+.wrap.sarvarov-wrap .button-primary {
+    background: #007bff;
+    box-shadow: 0 1px 0 #007bff;
+    text-shadow: 0 -1px 1px #007bff, 1px 0 1px #007bff, 0 1px 1px #007bff, -1px 0 1px #007bff;
+}
+
+/**
+ * SVG icons.
+ */
+.svg-icon {
+  display: inline-flex;
+  align-self: center;
+}
+
+.svg-icon svg {
+  height: 1em;
+  width: 1em;
+}
+
+.svg-icon.svg-baseline svg {
+  top: .125em;
+  position: relative;
+}
+
+/**
+ * Loader.
+ */
+.loader {
+	position: absolute;
+	display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+	background: rgba(255,255,255,.9);
+	z-index: 100;
+	transition: visibility 300ms ease, opacity 300ms ease;
+	visibility: visible;
+	opacity: 1;
+}
+
+.loader.loader-inactive {
+	visibility: hidden !important;
+	opacity: 0 !important;
+}
+
+.loader .loader-activity {
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	margin: auto;
+	top: 20%;
+	left: 50%;
+	margin-top: -20px;
+	margin-left: -20px;
+	background: #007bff;
+	border-radius: 100%;
+	transition-timing-function: cubic-bezier(.86,0,.07,1);
+	-webkit-animation: pulse-load 1.2s infinite ease-in-out;
+	animation: pulse-load 1.2s infinite ease-in-out;
+}
+
+@keyframes pulse-load {
+	0% {
+		-webkit-transform: scale(0);
+		transform: scale(0);
+	}
+	100% {
+		-webkit-transform: scale(1);
+		transform: scale(1);
+		opacity: 0;
+	}
+}

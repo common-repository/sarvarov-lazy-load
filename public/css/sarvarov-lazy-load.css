@@ -1,0 +1,79 @@
+.sarvarov-lazy-iframe, 
+.sarvarov-lazy-image {
+	display: block;
+	overflow: hidden;
+}
+
+.sarvarov-lazy-image {
+	display: block;
+	position: relative;
+    width: 100%;
+	overflow: hidden;
+	max-width: 100%;
+}
+
+.sarvarov-lazy-image > .sarvarov-lazyitem, 
+.sarvarov-lazy-image > .sarvarov-lazylqip, 
+.sarvarov-lazy-iframe > .sarvarov-lazyitem {
+	/* 0.001 for faster load */
+	opacity: 0.001;
+    will-change: opacity;
+    padding: 0;
+    margin: 0;
+}
+
+.sarvarov-lazy-image > .sarvarov-lazylqip {
+	overflow: hidden;
+}
+
+.sarvarov-lazy-image > .sarvarov-lazylqip > img {
+	-webkit-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+            transform: scale(1.1);
+	pointer-events: none;
+}
+
+.sarvarov-lazy-image > .sarvarov-lazyitem {
+	/* image selection fix because of will-change */
+	-o-object-fit: cover;
+	   object-fit: cover;
+}
+
+.sarvarov-lazy-image.sarvarov-lazyloaded .sarvarov-lazylqip.is-anim, 
+.sarvarov-lazy-image > .sarvarov-lazyitem.sarvarov-lazyloaded, 
+.sarvarov-lazy-iframe > .sarvarov-lazyitem.sarvarov-lazyloaded {
+	opacity: 1;
+}
+
+.sarvarov-lazy-image > .sarvarov-lazylqip, 
+.sarvarov-lazy-image > .sarvarov-lazyitem, 
+.sarvarov-lazy-image > noscript,  
+.sarvarov-lazy-iframe,  
+.sarvarov-lazy-iframe > noscript {
+	display: block;
+	position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.sarvarov-lazy-iframe iframe, 
+.sarvarov-lazy-image > * > img {
+	width: 100%;
+	height: 100%;
+}
+
+.sarvarov-lazy-image.animation-complete > .sarvarov-lazylqip {
+	display: none !important;
+}
+
+/* Gallery fix */
+.wp-block-gallery .blocks-gallery-image > *, 
+.wp-block-gallery .blocks-gallery-item > * {
+	-webkit-box-align: stretch !important;
+	    -ms-flex-align: stretch !important;
+	        align-items: stretch !important;
+}
